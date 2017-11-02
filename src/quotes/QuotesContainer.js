@@ -12,7 +12,7 @@ class QuotesContainer extends Component {
     }
 
     componentDidMount(){
-            fetch('http://loremricksum.com/api/?paragraphs=3&quotes=2')
+            fetch('http://loremricksum.com/api/?paragraphs=100&quotes=5')
             .then(response => response.json())
             .then(data => 
                 {

@@ -1,3 +1,19 @@
+This is a basic React App with react router 
+
+this hits the rick and morty api endpoint to get quotes and display
+
+## WIP 
+- will change the css on the home page 
+- will deploy on a ngix server on my personal website
+- using the container pattern 
+- using react router to link between home and the qoutes page 
+- havent displayed the qoutes yet WIP 
+- will use CSS grid to display each of the qoutes
+- will have a qoutes element with its own rNm image
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
