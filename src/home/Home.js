@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 import rickAndMorty from 'rick-and-morty';
-
+// state less component 
 const Home = () => {
     let rickNmortyImg = rickAndMorty.random();
 

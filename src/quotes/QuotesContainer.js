@@ -1,36 +1,32 @@
 import React, { Component } from 'react'; 
- import QuoteItem from './QuoteItem';
+ import QuoteList from './QuoteList';
 
 
 class QuotesContainer extends Component {
 
     constructor(){
         super()
+        // set state quotes as an empty array 
         this.state = {
-            quotes:[]
+            quotes: []
         };
     }
 
-    componentDidMount(){
-            fetch('http://loremricksum.com/api/?paragraphs=100&quotes=5')
+    componentWillMount(){
+            fetch('http://loremricksum.com/api/?paragraphs=5&quotes=1')
             .then(response => response.json())
-            .then(data => 
-                {
-                  
-                    this.setState({  quotes: data })
-                });
+            .then(data => {
+                console.log('parsed data ', data)
+                this.setState({quotes: data}) 
+            }).catch((err)=> {
+                console.log(err)
+            })
+              
     }
-
-    render(){
-        console.log(this.state)
-      
+    render() {
+        // within pass the state as props into the quotes list
         return ( 
-            // { this.state.quotes.data.map(
-            //     <QuoteItem  />
-            // )}
-                
-            <QuoteItem  />
-            
+                   <QuoteList  quotes={this.state.quotes.data} />         
         )
     }
 
